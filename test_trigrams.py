@@ -29,7 +29,7 @@ DIC_TABLE = [
 ]
 
 MAKE_TABLE = [
-    (2, {'dragons?, dragons': ['what'], 'dragons?': ['mine.']}, 2)
+    (6, {'what up?': ['mario'], 'it? mario': ['it.']}, 6)
 ]
 
 
