@@ -8,11 +8,7 @@ alias deactivate 'test $?_OLD_VIRTUAL_PATH != 0 && setenv PATH "$_OLD_VIRTUAL_PA
 # Unset irrelavent variables.
 deactivate nondestructive
 
-<<<<<<< HEAD
-setenv VIRTUAL_ENV "/Users/caseyokane/codefellows/401/trigrams/myvenv"
-=======
-setenv VIRTUAL_ENV "/Users/Sera/Dropbox/codefellows/401/trigrams/myvenv"
->>>>>>> master
+setenv VIRTUAL_ENV "/Users/caseyokane/codefellows/401/trigrams"
 
 set _OLD_VIRTUAL_PATH="$PATH"
 setenv PATH "$VIRTUAL_ENV/bin:$PATH"
@@ -21,8 +17,8 @@ setenv PATH "$VIRTUAL_ENV/bin:$PATH"
 set _OLD_VIRTUAL_PROMPT="$prompt"
 
 if (! "$?VIRTUAL_ENV_DISABLE_PROMPT") then
-    if ("myvenv" != "") then
-        set env_name = "myvenv"
+    if ("trigrams" != "") then
+        set env_name = "trigrams"
     else
         if (`basename "VIRTUAL_ENV"` == "__") then
             # special case for Aspen magic directories

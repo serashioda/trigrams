@@ -37,11 +37,7 @@ deactivate () {
 # unset irrelavent variables
 deactivate nondestructive
 
-<<<<<<< HEAD
-VIRTUAL_ENV="/Users/caseyokane/codefellows/401/trigrams/myvenv"
-=======
-VIRTUAL_ENV="/Users/Sera/Dropbox/codefellows/401/trigrams/myvenv"
->>>>>>> master
+VIRTUAL_ENV="/Users/caseyokane/codefellows/401/trigrams"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
@@ -58,8 +54,8 @@ fi
 
 if [ -z "$VIRTUAL_ENV_DISABLE_PROMPT" ] ; then
     _OLD_VIRTUAL_PS1="$PS1"
-    if [ "x(myvenv) " != x ] ; then
-	PS1="(myvenv) $PS1"
+    if [ "x(trigrams) " != x ] ; then
+	PS1="(trigrams) $PS1"
     else
     if [ "`basename \"$VIRTUAL_ENV\"`" = "__" ] ; then
         # special case for Aspen magic directories

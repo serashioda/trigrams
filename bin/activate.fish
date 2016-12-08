@@ -32,11 +32,7 @@ end
 # unset irrelavent variables
 deactivate nondestructive
 
-<<<<<<< HEAD
-set -gx VIRTUAL_ENV "/Users/caseyokane/codefellows/401/trigrams/myvenv"
-=======
-set -gx VIRTUAL_ENV "/Users/Sera/Dropbox/codefellows/401/trigrams/myvenv"
->>>>>>> master
+set -gx VIRTUAL_ENV "/Users/caseyokane/codefellows/401/trigrams"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH
@@ -59,8 +55,8 @@ if test -z "$VIRTUAL_ENV_DISABLE_PROMPT"
     # with the original prompt function renamed, we can override with our own.
     function fish_prompt
         # Prompt override?
-        if test -n "$(myvenv) "
-            printf "%s%s%s" "$(myvenv) " (set_color normal) (_old_fish_prompt)
+        if test -n "$(trigrams) "
+            printf "%s%s%s" "$(trigrams) " (set_color normal) (_old_fish_prompt)
             return
         end
         # ...Otherwise, prepend env

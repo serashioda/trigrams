@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-#!/Users/caseyokane/codefellows/401/trigrams/myvenv/bin/python3
-=======
-#!/Users/Sera/Dropbox/codefellows/401/trigrams/myvenv/bin/python3
->>>>>>> master
+#!/Users/caseyokane/codefellows/401/trigrams/bin/python3
 
 # -*- coding: utf-8 -*-
 import re
