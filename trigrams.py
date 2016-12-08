@@ -33,7 +33,6 @@ def create_story(num, dic):
     first_words = key_list[random.randint(0, len(key_list) - 1)]
     story = first_words.split(" ")
     while len(story) < num:
-        # import pdb; pdb.set_trace()
         new_key = "{0} {1}".format(story[-2], story[-1])
         if new_key in dic:
             temp_val = random.choice(dic[new_key])
@@ -49,17 +48,13 @@ def main(path, num=20):
     """Print story using functions to create a dictionary and import text from the path."""
     a = import_text(path)
     b = read_text(a)
-    print (b)
     c = create_dic(b)
-    print (c)
     d = create_story(num, c)
-    print (d)
     e = " ".join(d)
+    # return e
     print (e)
-    return e
 
 if __name__ == "__main__":
     path = sys.argv[1]
     num = int(sys.argv[2])
-    print (path, num)
     main(path, num)
