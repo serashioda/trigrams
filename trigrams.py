@@ -1,32 +1,31 @@
-import io
 import sys
+import io
 import random
+import re
 
 
-def text_import(path):
-    """Return imported text from desired path."""
+def import_text(path):
+    """Return imported path text."""
     original = io.open(path)
-    full_text = original.read()
+    text = original.read()
     original.close()
-    return full_text
+    return text
+
+def read_text(text):
+    text = text.replace('\r\n', ' ').replace('  ', ' ')
+    text = text.replace('\n', ' ').replace(' ', ' ')
+    return text
 
 
-def text_clean(full_text):
-    """Return text without DOS characters."""
-    clean = full_text.replace('\r\n', ' ').replace('  ', ' ')
-    return clean
-
-
-def create_dic(clean_text):
-    """Return a dictionary of key value pairs."""
-    lst = clean_text.split(' ')
+def create_dic(text):
+    """Return {} with key value pairs"""
+    first = text.split(' ')
     dic = {}
-    for words in range(0, len(lst) - 2):
-        couple = "{0} {1}".format(lst[words], lst[words + 1])
-        value = lst[words + 2]
+    for words in range(0, len(first) - 2):
+        couple = "{0} {1}".format(first[words], first[words + 1])
+        value = first[words + 2]
         dic.setdefault(couple, []).append(value)
     return dic
-
 
 def create_story(num, dic):
     """Return a story by passing in a number and a dictionary."""
@@ -45,21 +44,21 @@ def create_story(num, dic):
     story = story[0:num]
     return story
 
-
-def main(num, path):
-    """Print story of desired word length."""
-    a = text_import(path)
-    b = text_clean(a)
+def main(path, num=20):
+    """Print story using functions to create a dictionary and import text from the path."""
+    a = import_text(path)
+    b = read_text(a)
+    print (b)
     c = create_dic(b)
+    print (c)
     d = create_story(num, c)
-    x = " "
-    e = x.join(d)
+    print (d)
+    e = " ".join(d)
+    print (e)
     return e
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     path = sys.argv[1]
     num = int(sys.argv[2])
-    output = main(num, path)
-    outfile = io.open('dummy_text.txt' 'w')
-    outfile.write(output)
-    outfile.close()
+    print (path, num)
+    main(path, num)

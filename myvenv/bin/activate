@@ -37,7 +37,11 @@ deactivate () {
 # unset irrelavent variables
 deactivate nondestructive
 
+<<<<<<< HEAD
 VIRTUAL_ENV="/Users/caseyokane/codefellows/401/trigrams/myvenv"
+=======
+VIRTUAL_ENV="/Users/Sera/Dropbox/codefellows/401/trigrams/myvenv"
+>>>>>>> master
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
