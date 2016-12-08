@@ -1,32 +1,32 @@
 import pytest
 
 TEXT_TABLE = [
-    ('dummy_text.txt', 'help this is hard.')
+    ('test_sherlock.txt', 'test_sherlock.txt')
 ]
 
 CLEAN_TABLE = [
-    ('\r\niuguhbugjb.', ' test test.')
+    ('\r\niuguhbugjb.', ' iuguhbugjb.')
 ]
 
 DIC_TABLE = [
-    ('this is', {'test?': ['lol'], 'test': ['it.']})
+    ('Yo whattup? hi.'. {'Yo'})
 ]
 
 MAKE_TABLE = [
-    (8, {'dragons?': ['what'], 'dragons?': ['mine.']}, 1)
+    (8, {'dragons?, dragons': ['what'], 'dragons?': ['mine.']}, 1)
 ]
 
 
 @pytest.mark.parametrize('path, result', TEXT_TABLE)
-def test_text_import(path, result):
-    from trigrams import text_import
-    assert text_import(path) == result
+def test_import_text(path, result):
+    from trigrams import import_text
+    assert import_text(path) == result
 
 
 @pytest.mark.parametrize('full_text, result', CLEAN_TABLE)
-def test_text_clean(full_text, result):
-    from trigrams import text_clean
-    assert text_clean(full_text) == result
+def test_read_text(full_text, result):
+    from trigrams import read_text
+    assert read_text(full_text) == result
 
 
 @pytest.mark.parametrize('clean_text, result', DIC_TABLE)

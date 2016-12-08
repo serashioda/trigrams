@@ -33,6 +33,7 @@ def create_story(num, dic):
     first_words = key_list[random.randint(0, len(key_list) - 1)]
     story = first_words.split(" ")
     while len(story) < num:
+        # import pdb; pdb.set_trace()
         new_key = "{0} {1}".format(story[-2], story[-1])
         if new_key in dic:
             temp_val = random.choice(dic[new_key])
